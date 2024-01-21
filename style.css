@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.outer-div {
+    background-color: rgb(2, 2, 90);
+    padding: 68px 121px;
+}
+.inner-div {
+    background-color: rgb(225, 215, 244);
+    padding: 5px 20px;
+    border: 2px solid rgb(225, 215, 244);
+    box-shadow: 0px 5px 20px 8px rgba(225, 215, 244,0.9);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.nav_menu {
+    display: flex;
+}
+.logo i {
+    margin: 5px 50px;
+    font-size: 2rem;
+}
+.icons ul li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px;
+    font-size: 1.2rem;
+}
+.icons ul li:hover {
+    color: rgb(71, 45, 96);
+    text-decoration: underline;
+    padding: 2px 7px;
+    cursor: pointer;
+}
+.signup-btn {
+    width: 200px;
+}
+.signup-btn button {
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 5px 12px;
+    margin: 2px;
+    background-color: rgb(225, 215, 244);
+    cursor: pointer;
+    border: 1px solid black;
+}
+.signup-btn .login {
+    color: white;
+    border: 1px solid rgb(2, 2, 90);
+    background-color: rgb(2, 2, 90);
+    margin-right: 5%;
+}
+.dropdown {
+    display: none;
+    margin-top: 10px;
+}
+.dropdown button {
+    font-size: 15px;
+    padding: 5px 13px;
+    background: rgb(225, 215, 244);
+    border: 0px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px 5px rgba(212, 192, 245, 0.8);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(225, 215, 244);
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(212, 192, 245, 0.8);
+} 
+.dropdown-content ul li {
+    float: none;
+    color: black;
+    padding: 5px 8px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+} 
+.dropdown-content li:hover {
+    background-color: rgba(2, 2, 90,0.1);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.landing-page {
+    justify-content: center;
+}
+.landing-page h3 {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: rgb(71, 45, 96);
+}
+.landing-page p {
+    margin-top: 8px;
+    font-size: 15px;
+    padding: 0px 12vw;
+    text-align: center;
+    font-weight: 200;
+    color: rgb(102, 102, 102);
+}
+.mon-yr-change {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.mon-yr-change .text {
+    font-size: 18px;
+    font-weight: 550;
+    color: rgb(130, 8, 8);
+}
+.mon-yr-change #year {
+    padding-left: 10px;
+}
+.cl-toggle-switch {
+    position: relative;
+    display: inline;
+}  
+.cl-switch {
+    position: relative;
+    display: inline-block;
+}
+/* Input */
+.cl-switch > input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: -1;
+    position: absolute;
+    right: 6px;
+    top: -8px;
+    display: block;
+    margin: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(0, 0, 0, 0.38);
+    outline: none;
+    opacity: 0;
+    transform: scale(1);
+    pointer-events: none;
+    transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+}
+/* Track */
+.cl-switch > span::before {
+    content: "";
+    display: inline-block;
+    margin: 5px 0 5px 10px;
+    border-radius: 7px;
+    width: 36px;
+    height: 14px;
+    background-color: rgb(0, 0, 0, 0.38);
+    vertical-align: top;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+/* Thumb */
+.cl-switch > span::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 16px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s, transform 0.2s;
+}
+/* Checked */
+.cl-switch > input:checked {
+    right: -10px;
+    background-color: #85b8b7;
+}  
+.cl-switch > input:checked + span::before {
+    background-color: #85b8b7;
+}   
+.cl-switch > input:checked + span::after {
+    background-color: #018786;
+    transform: translateX(16px);
+}
+/* Hover, Focus */
+.cl-switch:hover > input {
+    opacity: 0.04;
+}  
+.cl-switch > input:focus {
+    opacity: 0.12;
+}  
+.cl-switch:hover > input:focus {
+    opacity: 0.16;
+}
+/* Active */
+.cl-switch > input:active {
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 0s, opacity 0s;
+}
+   
+.cl-switch > input:active + span::before {
+    background-color: #8f8f8f;
+}
+   
+.cl-switch > input:checked:active + span::before {
+    background-color: #85b8b7;
+}
+/* Disabled */
+.cl-switch > input:disabled {
+    opacity: 0;
+}
+.cl-switch > input:disabled + span::before {
+    background-color: #ddd;
+}
+.cl-switch > input:checked:disabled + span::before {
+    background-color: #bfdbda;
+}   
+.cl-switch > input:checked:disabled + span::after {
+    background-color: #61b5b4;
+}
+.per-month {
+    display: block;
+}
+.currency-convertor {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.currency-convertor select {
+    background: rgb(225, 215, 244);
+    padding: 5px 2px;
+    color: rgb(130, 8, 8);
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 5px rgba(212, 192, 245, 0.8);
+}
+.pricing-divs {
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.price-div {
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    min-width: 180px;
+}
+.price-div .price {
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0px;
+    margin-bottom: 25px;
+}
+.price-div h5 {
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 0.09rem;
+    line-height: 1.5rem;
+}
+.price-div button {
+    background-color: white;
+    font-size: 13px;
+    padding: 10px 25px;
+    border-radius: 35px;
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.per-year {
+    display: none;
+}
+/*COMMON CLASSES*/
+.plan-type {
+    font-size: 12px;
+    letter-spacing: 0.09rem;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+.plan-time {
+    font-size: 11px;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.15rem;
+    font-family: sans-serif;
+}
+.rate {
+    font-size: 40px;
+    font-family: sans-serif;
+    margin: 3px 0px;
+    font-weight: 550;
+}
+.purple1 {
+    background-color: rgba(138,115,185,255);
+}
+.purple2 {
+    background-color: rgba(118,101,153,255);
+}
+.purple-text {
+    color: rgba(138,115,185,255);
+}
+.green1 {
+    background-color: rgba(75,184,145,255);
+}
+.green2 {
+    background-color: rgba(72,137,113,255);
+}
+.green-text {
+    color: rgba(75,184,145,255);
+}
+.blue1 {
+    background-color: rgba(50,152,224,255);
+}
+.blue2 {
+    background-color: rgba(63,133,184,255);
+}
+.blue-text {
+    color: rgba(50,152,224,255);
+}
+.orange1 {
+    background-color: rgba(234,156,82,255);
+}
+.orange2 {
+    background-color: rgba(192,136,85,255);
+}
+.orange-text {
+    color: rgba(234,156,82,255);
+}
+
+
+
+/*MEDIA QUERIES STYLING*/
+
+
+@media only screen and (max-width:1050px) {
+    .outer-div {
+        padding: 40px 80px;
+    }
+    .nav_menu {
+        display: none;
+    }
+    .dropdown {
+        display: block;
+    }
+    .logo i {
+        margin: 5px 10px;
+    }
+}
+@media only screen and (max-width:970px) {
+    .pricing-divs {
+        overflow: auto;
+        white-space: nowrap;
+        display: block;
+    }
+    .price-div {
+        margin-left: 8px;
+    }
+}
+@media only screen and (max-width:600px) {
+    .outer-div {
+        padding: 40px 50px;
+    }
+    .landing-page p {
+        font-size: 12px;
+        padding: 0px 2vw;
+        margin-top: 5px;
+    }
+}
+@media only screen and (max-width:500px) {
+    .landing-page h3 {
+        font-size: 35px;
+    }
+    .mon-yr-change {
+        margin-top: 20px;
+    }    
+}
+@media only screen and (max-width:400px) {
+    .landing-page h3 {
+        font-size: 30px;
+        margin-top: 40px;
+    }
+    .outer-div {
+        padding: 30px;
+    }
+    .logo i {
+        margin: 5px;
+        font-size: 1.2rem;
+    }
+    .dropdown {
+        margin-top: 5px;
+    }
+    .dropdown button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .dropdown-content {
+        min-width: 30px;
+    } 
+    .dropdown-content ul li {
+        font-size: 13px;
+        padding: 5px 9px;
+    }
+    .cl-switch > input {
+        width: 36px;
+        height: 36px;
+    }
+    .cl-switch > span::before {
+        width: 32px;
+        height: 11px;
+    }
+    .cl-switch > span::after {
+        width: 15px;
+        height: 15px;
+    }
+    .mon-yr-change .text {
+        font-size: 15px;
+    }
+    .price-div {
+        min-width: 130px;
+    }
+    .price-div .price {
+        padding: 15px 0px;
+        margin-bottom: 10px;
+    }
+    .price-div h5 {
+        font-size: 13px;
+        font-weight: 100;
+        letter-spacing: 0.09rem;
+        line-height: 1.2rem;
+    }
+    .price-div button {
+        font-size: 13px;
+        padding: 10px 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .plan-type {
+        font-size: 11px;
+        letter-spacing: 0.09rem;
+        font-family: sans-serif;
+        font-weight: 550;
+    }
+    .plan-time {
+        font-size: 10px;
+        font-weight: 100;
+        letter-spacing: 0.1rem;
+        word-spacing: 0.15rem;
+        font-family: sans-serif;
+    }
+    .rate {
+        font-size: 35px;
+        font-family: sans-serif;
+        margin: 3px 0px;
+        font-weight: 550;
+    }
+}
+@media only screen and (max-width:320px) {
+    .landing-page h3 {
+        font-size: 25px;
+        margin-top: 40px;
+    }
+    .landing-page p {
+        font-size: 9px;
+        padding: 0px 2px;
+        margin-top: 3px;
+    }
+    .dropdown button {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    .currency-convertor select {
+        max-width: 150px;
+        padding: 5px 2px;
+    }
+    .currency-convertor option {
+        font-size: 10px;
+        padding: 2px;
+    }
+    .cl-switch > input {
+        width: 25px;
+        height: 30px;
+    }
+    .cl-switch > span::before {
+        width: 25px;
+        height: 9px;
+    }
+    .cl-switch > span::after {
+        width: 12px;
+        height: 12px;
+    }
+    .mon-yr-change .text {
+        font-size: 12px;
+    }
+    .inner-div {
+        padding: 5px 10px;
+    }
+}
+@media only screen and (max-width:260px) {
+    .landing-page h3 {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    .landing-page p {
+        font-size: 7px;
+        padding: 0px 2px;
+    }
+}
